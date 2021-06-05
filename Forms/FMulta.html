@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/styleF.css">
+    <title>Multas</title>
+</head>
+<body>
+    <form class="formulario" method="POST" action="../Instructions/IMulta.php">
+        <h4>MULTAS</h4>
+        <label>Agente de tránsito</label>
+        <input class="controls" type="text" name="agenteTransito" id="agenteTransito" placeholder="Ingrese el nombre del agente">
+        <br>
+        <label>Garantía</label>
+        <input class="controls" type="text" name="garantia" id="garantia" placeholder="Ingrese la garantía">
+        <br>
+        <label>Fecha</label>
+        <input class="controls" type="date" name="horaFecha" id="horaFecha">
+        <br>
+        <label>Lugar</label>
+        <input class="controls" type="text" name="lugar" id="lugar" placeholder="Ingrese el lugar">
+        <br>
+        <label>Motivo</label>
+        <input class="controls" type="text" name="motivo" id="motivo" placeholder="Ingrese el motivo">
+        <br>
+        <label>Fecha de pago</label>
+        <input class="controls" type="date" name="fechaPago" id="fechaPago">
+        <br>
+        <label>Fundamento</label>
+        <input class="controls" type="text" name="fundamento" id="fundamento" placeholder="Ingrese el fundamento">
+        <br>
+        <label>ID Licencia</label>
+        <input class="controls" type="number" name="idLicencia" id="idLicencia" placeholder="Ingrese el ID de licencia">
+        <br>
+        <label>Folio</label>
+        <input class="controls" type="number" name="folio" id="folio" placeholder="Ingrese el folio">
+        <br>
+    
+        <input class="boton" type="submit">
+    </form>
+</body>
+</html>

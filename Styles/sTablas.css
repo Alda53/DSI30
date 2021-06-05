@@ -1,0 +1,57 @@
+* {
+    font-family: 'calibri';
+    color: white;
+    text-align: center;
+}
+
+body{
+    background: #222222;
+}
+
+.control{
+    background: #24303c;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.boton{
+    background: #1f53c5;
+    border: none;
+    padding: 8px;
+    margin: 16px 0;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+select{
+    margin-left: 5px;
+    background: #1f53c5;
+    border-radius: 4px;
+    font-size: 16px;
+    border:none;
+    padding: 5px;
+}
+  
+.content-table {
+    border-collapse: collapse;
+    margin: auto;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+  
+.content-table thead tr {
+    background-color: #1f53c5;
+}
+  
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+  
+.content-table tbody tr {
+    background-color: #24303c;
+}

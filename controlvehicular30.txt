@@ -1,0 +1,94 @@
+controlvehicular30
+
+CREATE TABLE Propietarios(
+idPropietario int PRIMARY KEY AUTO_INCREMENT,
+nombrePropietario varchar(50) NOT NULL,
+apellidoPaterno varchar(40) NOT NULL,
+apellidoMaterno varchar(40) NOT NULL,
+localidad varchar(70) NOT NULL,
+municipio varchar(50) NOT NULL,
+RFC varchar(13) NOT NULL UNIQUE KEY
+);
+
+CREATE TABLE Tarjetas(
+folio int PRIMARY KEY AUTO_INCREMENT,
+uso varchar(50) NOT NULL,
+fechaExp date NOT NULL,
+oficinaExp varchar(75) NOT NULL,
+tipoServicio varchar(20) NOT NULL,
+movimiento varchar(20) NOT NULL
+);
+
+CREATE TABLE Multas(
+idMulta int PRIMARY KEY AUTO_INCREMENT,
+agenteTransito varchar(100) NOT NULL,
+garantia varchar(10) NOT NULL,
+horaFecha DateTime NOT NULL,
+lugar varchar(30) NOT NULL,
+motivo varchar(35) NOT NULL,
+fechaPago Date NOT NULL,
+fundamento varchar(55) NOT NULL
+);
+
+CREATE TABLE Licencias(
+idLicencia int PRIMARY KEY AUTO_INCREMENT,
+numero Smallint NOT NULL,
+fechaExp Date NOT NULL,
+tipo char(1) NOT NULL,
+fechaVenc DATE NOT NULL
+);
+
+CREATE TABLE Conductores(
+idConductor int PRIMARY KEY AUTO_INCREMENT,
+nombre varChar(35) NOT NULL,
+apellidoPaterno varchar(30) NOT NULL,
+apellidoMaterno varchar(15) NOT NULL,
+tipoSangre char(3) NOT NULL,
+fechaNac Date NOT NULL,
+firma varchar(50) NOT NULL,
+antiguedad tinyint NOT NULL,
+donador char(1) NOT NULL,
+observacion varchar(350),
+foto varchar(30) NOT NULL,
+numEmergencia varchar(20) NOT NULL,
+restriccion varchar(150) NOT NULL
+);
+
+CREATE TABLE Verificaciones(
+folio int PRIMARY KEY AUTO_INCREMENT,
+emision varchar(35) NOT NULL,
+fechaHora DateTime NOT NULL,
+centroVerif varchar(35) NOT NULL,
+tecnico varchar(100) NOT NULL,
+dictamen varchar(100) NOT NULL,
+periodo date NOT NULL,
+tipo varchar(15) NOT NULL
+);
+
+CREATE TABLE Vehiculos(
+idVehiculo int PRIMARY KEY AUTO_INCREMENT,
+claveVehicular varchar(5) NOT NULL,
+marca varchar(25) NOT NULL,
+modelo varchar(20) NOT NULL,
+color varchar(20) NOT NULL,
+numMotor int NOT NULL,
+numSerie varchar(17) NOT NULL,
+transmision varChar(20) NOT NULL,
+numCilindro tinyint NOT NULL,
+origen varchar(30) NOT NULL,
+linea varchar(20) NOT NULL,
+sublinea varchar(20) NOT NULL,
+numPuerta smallint,
+tipo varchar(15) NOT NULL,
+clase varchar(20) NOT NULL,
+combustible varChar(10) NOT NULL,
+numPlaca varchar(7) NOT NULL
+);
+
+CREATE TABLE Tenencias(
+idTenencia int PRIMARY KEY AUTO_INCREMENT,
+tipoTenencia varchar(20) NOT NULL,
+periodo Date NOT NULL,
+monto Double(7,2) NOT NULL,
+lugar varchar(20) NOT NULL
+);
